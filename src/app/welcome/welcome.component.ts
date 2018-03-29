@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
-import moment = require("moment/moment");
 
 @Component({
   selector: 'app-welcome',
