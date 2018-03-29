@@ -8,13 +8,19 @@ import { AuthService } from '../servicios/auth.service';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
+
+  ahora:Date;
+
   constructor(
     public authService: AuthService,
     public router: Router
   ) { }
+
   ngOnInit() {
+    this.ahora = new Date();
     if(!this.authService.hayToken()){
       this.router.navigate(['login']);
     }
   }
-  }
+
+}
